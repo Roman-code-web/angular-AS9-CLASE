@@ -1,0 +1,8 @@
+.input__Check{
+    cursor: pointer;
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    border-style: none;
+    border: 2px solid rgb(12, 12, 198);
+}

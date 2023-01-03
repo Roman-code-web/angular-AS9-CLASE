@@ -1,33 +1,35 @@
 
-        <div class="flex justify-center flex-col mt-10">
+       <div class="flex justify-center flex-col mt-10  ">
             <div class="flex flex-col justify-center">
                 <h1 class="text-center text-5xl font-bold  mb-5">Ejercicio Angular</h1>
                 <div class="form-check text-center mb-5">
-                    <input class="checked:bg-blue-500" type="checkbox" value="" #check (click)="mostar(check)" >
-                    <label class="" for="flexCheckDefault">
+                    <input class="input__Check" type="checkbox" value="" #check id="check" (click)="mostar(check)" >
+                    <label class="font-bold text-3xl" for="check">
                      {{nombre}}
                     </label>
                 </div>
             </div>
-            <ng-template class="" #divInformacion >
-                <p class="text-center text-white font-bold bg-black p-2">Activa el checkbox para mostrar el contenido</p>
-                <div class="d-flex justify-center">
-                  <img src="https://img.icons8.com/emoji/512/grinning-face-with-big-eyes--v2.png" style="width: 300px; margin: auto;" alt="">
+            <ng-template #divInformacion >
+                <div class="flex  flex-col items-center justify-center">
+                    <p class="text-center text-white font-bold bg-black p-2 w-96">Activa el checkbox para mostrar el contenido</p>
+                    <div class="d-flex justify-center">
+                        <img src="https://img.icons8.com/emoji/512/grinning-face-with-big-eyes--v2.png" style="width: 300px; margin: auto;" alt="">
+                    </div>
                 </div>
+                
               </ng-template>
-            <div class="" *ngIf="mostrarDiv===true ; else divInformacion">
+            <div class="flex flex-col justify-center items-center" *ngIf="mostrarDiv===true ; else divInformacion">
               <div>
-                <p class="text-center  text-white font-bold bg-lime-500  p-2">Bien!! Activaste el checkbox</p>
+                <p class="text-center  text-white font-bold bg-lime-500 p-2 w-96">Bien!! Activaste el checkbox</p>
               </div>
-              <div class=" p-3">
+              <div class=" mt-5 p-3 border-solid border-2 border-sky-500">
                 <img src="https://img.icons8.com/color/480/angularjs.png" style="width: 250px;height: 250px; margin: auto;" class="card-img-top" alt="...">
-                <div class="">
+                <div class=" w-96">
                   <h5 class="text-center  font-bold p-1">Angular</h5>
-                  <p class=" p" >Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por 
+                  <p class="text-justify" >Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por 
                     Google, que se utiliza para crear y mantener aplicaciones web de una sola página.</p>
                 </div>
               </div>
             </div>
-            
         </div>
 
